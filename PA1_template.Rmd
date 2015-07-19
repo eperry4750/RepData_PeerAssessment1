@@ -9,6 +9,7 @@ output:
 ## Loading and preprocessing the data
 
 ```{r}
+echo = TRUE
 # unzips the file repdata-data-activity.zip in the data folder and
 # stores the result activity.csv in the data file
 unzip(zipfile="./data/repdata-data-activity.zip",exdir="./data")
