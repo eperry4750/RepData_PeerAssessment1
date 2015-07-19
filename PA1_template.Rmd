@@ -50,7 +50,7 @@ hist(amd_sum$total_steps,
 amd_mean_median <- amd_omit %>%
   group_by(date) %>%
   summarise(median = median(steps), mean = mean(steps))
-amd_mean_median
+print(amd_mean_median, n = 53)
 ```
 
 ## The code for average daily activity pattern and plot.
@@ -132,13 +132,13 @@ amd_fixed_mean_median <- amd_fixed %>%
   group_by(date) %>%
   summarise(median = median(steps), mean = mean(steps))
 
-amd_fixed_mean_median
+print(amd_fixed_mean_median, n = 61)
 ```
 
 ## The code for differences in activity patterns between
 ## weekdays and weekends and plot.
 
-```{r}
+```{r, fig.height = 10}
 # adds a column with days that corresponds to dates
 amd_fixed$day <- weekdays(as.Date(amd_fixed$date))
 
